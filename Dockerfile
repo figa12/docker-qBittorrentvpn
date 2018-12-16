@@ -16,7 +16,7 @@ RUN usermod -u 99 nobody
 RUN apt-get update \
     && apt-get install -y --no-install-recommends apt-utils openssl \
     && apt-get install -y software-properties-common \
-    && add-apt-repository ppa:qbittorrent-team/qbittorrent-stable \
+    && add-apt-repository ppa:qbittorrent-team/qbittorrent-unstable \
     && apt-get update \
     && apt-get install -y qbittorrent-nox openvpn curl moreutils net-tools dos2unix kmod iptables ipcalc unrar \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
